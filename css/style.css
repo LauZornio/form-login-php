@@ -1,0 +1,350 @@
+@font-face {
+  font-display: swap;
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/sarabun-v15-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-display: swap;
+  font-family: 'Sarabun';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/sarabun-v15-latin-700.woff2') format('woff2');
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.clearer {
+  clear: both;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+}
+
+*:focus {
+  outline: none;
+}
+
+body {
+  background-color: #f4f4f4;
+  font-family: 'Sarabun', sans-serif;
+  color: #1a1a1a;
+}
+
+.clearfix::before,
+.clearfix::after {
+  content: "\0020";
+  display: block;
+  height: 0;
+  overflow: hidden;
+}
+
+.clearfix::after {
+  clear: both;
+}
+
+.content {
+  margin: 0 auto;
+  width: 1160px;
+}
+
+.col-1 {
+  width: 8.33333%;
+}
+
+.col-2 {
+  width: 16.66666%;
+}
+
+.col-3 {
+  width: 25%;
+}
+
+.col-4 {
+  width: 33.33333%;
+}
+
+.col-6 {
+  width: 50%;
+}
+
+.col-8 {
+  width: 66.66666%;
+}
+
+.col-10 {
+  width: 83.33333%;
+}
+
+.divider {
+  padding: 20px 0;
+}
+
+.spacer {
+  padding: 70px 0;
+}
+
+.responsive {
+  height: auto;
+  width: 100%;
+}
+
+.center {
+  text-align: center;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a {
+  word-wrap: break-word;
+}
+
+/* Typography */
+h1 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 70px;
+  font-size: clamp(25px, 5vw, 40px);
+  padding-top: 30px;
+}
+
+h2 {
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+  font-size: clamp(20px, 4vw, 32px);  
+}
+
+p {
+  font-weight: 400;
+  font-size: clamp(16px, 3vw, 24px);
+}
+
+a {
+  text-decoration: none;
+}
+
+p.red {
+  color: #c14432;
+}
+
+h4 {
+  font-weight: 700;
+  text-align: center;
+  padding: 40px 0 80px;
+  font-size: clamp(20px, 4vw, 25px);
+  color: #fff;
+}
+
+/* Global CSS */
+.structure {
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+}
+
+.col-sx {
+  padding-top: 65px;
+}
+
+.form-container {
+  background-color: #fff;
+  padding: clamp(20px, 5vw, 80px) clamp(20px, 5vw, 80px) clamp(40px, 10vw, 120px);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: clamp(200px, 70%, 800px);
+}
+
+/* per centrare il form */
+.form-register {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 0 100px 0;
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px;
+}
+
+input[type="text"], input[type="email"] {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.avvisoT {
+  color: #45a049;
+  padding: 20px 0 30px;
+}
+
+.avvisoF {
+  color: #c14432;
+  padding: 20px 0 30px;
+}
+
+.button {
+  width: 50%;
+  padding: 10px;
+  margin-top: 40px;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  font-size: clamp(18px, 1vw, 26px);
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+.centratura {
+  display: flex;
+  justify-content: center;
+}
+
+/* Pagina GESTIONE_CONTATTI */
+.user-list {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.user-row {
+  display: flex;
+  text-align: left;
+}
+
+.user-row.header {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: clamp(16px, 3vw, 24px);
+}
+
+.user-cell {
+  flex: 1;  /* Distributes space equally */
+  padding: 8px;
+  border: 1px solid #d2d0d0;
+}
+
+.user-row:nth-child(even) {
+  background-color: #ebebeb;
+}
+
+.user-row:hover:not(.header) {
+  background-color: #ddd;
+}
+
+.id-cell {
+  flex: 0 0 50px; /* Fixed width */
+  text-align: center;
+}
+
+.name-cell {
+  flex: 1; /* Flexible width that adjusts based on content */
+}
+
+.email-cell {
+  flex: 2; /* Takes twice as much space as the name cell */
+}
+
+.user-row .user-cell a {
+  color: #c14432;
+}
+
+.user-row i {
+  margin-right: 10px;
+}
+
+.user-row .user-cell a:hover {
+  text-decoration: underline;
+}
+
+.user-row .user-cell.edit a {
+  color:#2c3e50;
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #2c3e50;
+  width: 100%;
+  height: 25%;
+}
+
+@media only screen and (min-width: 1024px) and (max-width: 1200px) {
+  .content {
+    margin: 0 4%;
+    width: 92%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-6,
+  .col-8,
+  .col-10 {
+    width: 100%;
+  }
+  
+  .content {
+    margin: 0 4%;
+    width: 92%;
+  }
+
+  .structure {
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .col-sx {
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 40px;
+  }
+
+  h1 {
+    margin-bottom: 40px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-6,
+  .col-8,
+  .col-10 {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  
+}
