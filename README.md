@@ -1,5 +1,6 @@
 # form-login-php
-PHP - Come gestire gli utenti in registrazione, modifica e cancellazione utente. Esercizio senza PWS
+PHP - Come gestire gli utenti in registrazione, modifica e cancellazione utente appoggiandosi al DB in locale. Esercizio senza PWS.
+
 
 ## Funzionalità
 
